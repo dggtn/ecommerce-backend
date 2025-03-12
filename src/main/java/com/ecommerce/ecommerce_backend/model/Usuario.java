@@ -1,9 +1,15 @@
 package com.ecommerce.ecommerce_backend.model;
+import com.ecommerce.ecommerce_backend.dominio.Roles;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import static com.ecommerce.ecommerce_backend.dominio.Roles.ROL_USUARIO;
 
 
 @Entity
@@ -22,6 +28,12 @@ public class Usuario {
 
     private String numeroCelular;
 
-    private String rol;
+    private Roles rol = ROL_USUARIO.ROL_VENDEDOR;
+
+    private Set<Direccion> direcciones =  new HashSet<>();
+
+    private Set<Cupon> cuponUsado =  new HashSet<>();
+
+
 
 }
