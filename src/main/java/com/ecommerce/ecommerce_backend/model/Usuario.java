@@ -14,6 +14,14 @@ public class Usuario {
     private Long id;
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    private String password;
+    private String contrasena;
+
+    private String email;
+
+    private String nombreCompleto;
+
+    private String numeroCelular;
+
+    private String rol;
 
 }
