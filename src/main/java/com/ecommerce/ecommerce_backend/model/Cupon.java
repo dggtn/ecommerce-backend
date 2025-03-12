@@ -12,6 +12,5 @@ import lombok.*;
 @NoArgsConstructor
 @EqualsAndHashCode
 public class Cupon {
-    @Id
-    @GeneratedValue
+
 }
