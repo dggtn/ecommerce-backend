@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.*;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -13,6 +14,11 @@ import static com.ecommerce.ecommerce_backend.dominio.Roles.ROL_USUARIO;
 
 
 @Entity
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode
 public class Usuario {
 
     @Id
