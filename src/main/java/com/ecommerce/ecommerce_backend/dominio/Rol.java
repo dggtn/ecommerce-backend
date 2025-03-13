@@ -1,6 +1,6 @@
 package com.ecommerce.ecommerce_backend.dominio;
 
-public enum Roles {
+public enum Rol {
 
     ROL_ADMIN,
     ROL_USUARIO,
