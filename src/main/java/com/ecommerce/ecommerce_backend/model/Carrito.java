@@ -26,9 +26,9 @@ public class Carrito {
 
     private int itemsTotales;
 
-    private int totalMasIva
+    private int totalMasIva;
 
-    private int discount;
+    private int descuento;
 
     private String codigoCupon;
 
