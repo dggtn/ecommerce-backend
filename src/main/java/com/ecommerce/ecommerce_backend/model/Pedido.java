@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -26,7 +27,24 @@ public class Pedido {
     private Long vendedorId;
 
     @OneToMany(mappedBy= "order",cascade =CascadeType.ALL,orphanRemoval = true)
-    private List<PedidoItem>orderItems = new ArrayList<>();
+    private List<PedidoItem> orderItems = new ArrayList<>();
+
+    @ManyToOne
+
+    private Direccion direcionDeEntrega;
+
+    @Embedded
+    private MetodoDePago metodoDePago = new MetodoDePago();
+    private double totalprecioMasIva;
+    private Integer totalPrecioVenta;
+
+    private Integer descuento;
+
+    private PedidoEstatus estdtusPedido;
+
+
+
+
 
 
 
