@@ -20,6 +20,8 @@ public class Carrito {
     @OneToOne
     private Usuario usuario;
 
+
+    @OneToMany(mappedBy = "carrito", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<ItemCarrito> itemsDelCarrito = new HashSet<>();
 
     private   double PrecioTotal;
