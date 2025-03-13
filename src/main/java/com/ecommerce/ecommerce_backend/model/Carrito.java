@@ -20,7 +20,7 @@ public class Carrito {
     @OneToOne
     private Usuario usuario;
 
-    private Set<ItemsDelCarrito> itemsDelCarrito = new HashSet<>();
+    private Set<ItemCarrito> itemsDelCarrito = new HashSet<>();
 
     private   double PrecioTotal;
 

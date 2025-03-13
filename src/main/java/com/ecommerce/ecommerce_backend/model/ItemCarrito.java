@@ -12,7 +12,7 @@ import lombok.*;
 @NoArgsConstructor
 @EqualsAndHashCode
 
-public class ItemsDelCarrito {
+public class ItemCarrito {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -23,4 +23,15 @@ public class ItemsDelCarrito {
     private Carrito carrito;
 
     private Producto producto;
+
+    private String tamano;
+    private int cantidad = 1;
+
+    private Integer precioIva;
+
+    private Integer precioVenta;
+
+    private Long userId;
+
+
 }
