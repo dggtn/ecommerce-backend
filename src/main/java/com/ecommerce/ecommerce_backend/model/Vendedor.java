@@ -2,7 +2,7 @@ package com.ecommerce.ecommerce_backend.model;
 
 
 import com.ecommerce.ecommerce_backend.dominio.EstatusCuenta;
-import com.ecommerce.ecommerce_backend.dominio.Roles;
+import com.ecommerce.ecommerce_backend.dominio.Rol;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -36,7 +36,7 @@ public class Vendedor {
     private Direccion direccionEntrega = new Direccion();
 
     private String GSTIN;
-    private Roles rol = Roles.ROL_USUARIO;
+    private Rol rol = Rol.ROL_USUARIO;
     private boolean elEmailEsVerificado = false;
 
     private EstatusCuenta estatusCuenta = EstatusCuenta.VERIFICACION_PENDIENTE;
