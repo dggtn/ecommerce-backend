@@ -1,5 +1,5 @@
 package com.ecommerce.ecommerce_backend.model;
-import com.ecommerce.ecommerce_backend.dominio.Roles;
+import com.ecommerce.ecommerce_backend.dominio.Rol;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
@@ -8,7 +8,7 @@ import lombok.*;
 import java.util.HashSet;
 import java.util.Set;
 
-import static com.ecommerce.ecommerce_backend.dominio.Roles.ROL_USUARIO;
+import static com.ecommerce.ecommerce_backend.dominio.Rol.ROL_USUARIO;
 
 
 @Entity
@@ -32,7 +32,7 @@ public class Usuario {
 
     private String numeroCelular;
 
-    private Roles rol = ROL_USUARIO.ROL_VENDEDOR;
+    private Rol rol = ROL_USUARIO.ROL_VENDEDOR;
 
     @OneToMany
     private Set<Direccion> direcciones =  new HashSet<>();
