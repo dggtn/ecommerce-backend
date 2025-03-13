@@ -1,12 +1,11 @@
 package com.ecommerce.ecommerce_backend.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -25,6 +24,15 @@ public class Cupon {
     private LocalDate validoInicioFecha;
 
     private LocalDate validoFinFecha;
+    private double ordenMinima;
+
+    private boolean estaActivo = true;
+
+
+    @ManyToMany(mappedBy= "cuponesUsados")
+    private Set<Usuario>usadoPorUsuarios = new HashSet<>();
+
+
 
 
 
