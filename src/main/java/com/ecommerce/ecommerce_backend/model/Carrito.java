@@ -22,6 +22,14 @@ public class Carrito {
 
     private Set<ItemsDelCarrito> itemsDelCarrito = new HashSet<>();
 
+    private   double PrecioTotal;
 
+    private int itemsTotales;
+
+    private int totalMasIva
+
+    private int discount;
+
+    private String codigoCupon;
 
 }
